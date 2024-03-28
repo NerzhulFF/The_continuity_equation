@@ -1,0 +1,70 @@
+<html>
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js" defer></script>
+  <script src='https://cdn.plot.ly/plotly-2.20.0.min.js' defer></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .module {
+      background-color: #fff;
+      width: 50vw;
+      height: 80vh;
+      z-index: 10;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #111;
+    };
+  </style>
+</head>
+<body>
+<!-- Plotly chart will be drawn inside this DIV -->
+<div id="graphDiv"></div>
+<div class="container">
+  <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+</div>
+  <script src="script.js" defer></script>
+  <div class="instruction" style="position: absolute; top: 20px; left: 30px; width: 250px; height: 100px;">
+    <img src="./img/MSU-logo.jpg" style="width: 55px;">
+    <button id="instruction-btn" style="position: relative; top: -25px; left: 5px; height: 50px; width: 87px; font-size: 16px; cursor: pointer;">instruction</button>
+  </div>
+  <a href="evolution.html"><button style="position: absolute; top: 90px; left: 30px; width: 150px; height: 60px; font-size: 20px; cursor: pointer;">Evolution</button></a>
+  <a href="characteristics.html"><button style="position: absolute; top: 170px; left: 30px; width: 150px; height: 60px; font-size: 20px; cursor: pointer;">characteristics</button></a>
+  <form style="position: absolute; top: 370px; left: 30px; width: 150px; height: 80px; font-size: 20px; display: flex; flex-flow: wrap column; justify-content: space-between;" action="submit">
+    <label for="" style="font-size: 15px;">Put a link for CSV here</label>
+    <input type="text" id="input-url">
+    <button style="width: 100px; cursor: pointer;" id="commit-btn">Commit</button>
+  </form>
+  <form style="position: absolute; top: 170px; right: 30px; width: 220px; height: 120px; font-size: 20px; display: flex; flex-flow: wrap row; justify-content: space-evenly;">
+    <label style="font-size: 16px; width: 95px;">number of grid steps =</label>
+    <input type="number" style="height: 38px; width: 95px;" id="duration" value="300">
+    <button style="width: 250px; cursor: pointer; height: 25px; margin-left: 60px;" id="set-btn">SET and download CSV</button>
+  </form>
+<div class="equestion" style="position: absolute; display: flex; flex-flow: wrap column; justify-content: center; align-items: center; top: 20px; right: 5px; z-index: 1; width: 250px; border: 1px solid #111;">
+  <span style="font-size: 18px;">Continuity equation</span>
+  <img src="img/equestion.jpg" style="width: 250px;">
+</div>
+<div class="my-info-box" style="position: absolute; display: flex; flex-flow: wrap column; justify-content: start; align-items: center; bottom: 30px; right: 5px; z-index: 1; width: 250px; border: 1.5px solid #111; height: 150px;">
+  <h3 style="height: 0px; width: 250px; text-align: center;">Info:</h3>
+  <p>Made by Nikita Gandilyan 327</p>
+    <div style="display: flex; align-items: center; flex-flow: wrap row;"><img src="img/GitHub-Logo.png" style="width: 50px;"><a href="https://github.com/NerzhulFF?tab=repositories">Github repositories</a></div>
+</div>
+
+<div class="container-module reveal" style="position: absolute; width: 98.8vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5); z-index: 5; top: 0px; left: 0px;">
+  <div class="module">
+    <h3 style="text-align: center; text-transform: uppercase;">instruction</h3>
+    <p style="margin-left: 15px; line-height: 24px;">
+      This project is one of the practical works at the Physics Faculty of Moscow State University of the 3rd year on the subject of OMM (basics of mathematical modeling). <br>Here we consider the continuity equation. In the 'Characteristics' section, we build the characteristics and look at the presence of an intersection. The 'Evolution' section shows the graph profile over time.<br>The solvation is made based on the running account scheme (схема бегущего счёта). <br>In this program, you can set grid parameter - number of grid steps. To do this, after setting the parameter, click the "Set and download CSV" button. A csv file will be downloaded to your computer, which you need to upload to the Internet and insert a link to it in the 'Put a link for CSV file' field. Then press 'Commit'.
+    </p>
+    <button style="position: absolute; bottom: 10px; right: 10px; cursor: pointer;" id="close-btn">close</button>
+  </div>
+</div>
+<style>
+  .reveal {
+    display: none;
+  };
+</style>
+</body>
+</html>

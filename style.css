@@ -1,0 +1,26 @@
+.container {
+    width: 85vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+};
+
+.module {
+    background-color: #fff;
+    width: 50vw;
+    height: 80vh;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #111;
+  };
+  .container-module {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111
+  };
